@@ -1,0 +1,11 @@
+# Images are stable between edits; let repeat visits skip the revalidation
+# round-trip. Shorten this if you start swapping the portrait often.
+/portrait.jpg
+  Cache-Control: public, max-age=604800
+
+/og-card.png
+  Cache-Control: public, max-age=604800
+
+# The page itself stays revalidated so edits go live immediately.
+/
+  Cache-Control: public, max-age=0, must-revalidate
