@@ -4,7 +4,7 @@ A single-page "tap card": a self-contained digital business card for an NFC tag
 or QR code. Save-contact (vCard), Share, on-page QR, quick WhatsApp/Instagram/
 email actions, Cal.com booking, and a list of links.
 
-Live: https://hanees-card.bina24.workers.dev
+Live: https://hanees.site
 
 ## Files
 
@@ -34,8 +34,9 @@ outside it is. To publish a change:
 npx wrangler deploy
 ```
 
-If you move the card to a custom domain, update the absolute
-`og:image` and `og:url` URLs in the `<head>` to match — social unfurlers need
+The card is served on the custom domain `hanees.site` (set under `routes` in
+`wrangler.jsonc`). If you move it to another domain, update that route and the
+absolute `og:image` and `og:url` URLs in the `<head>` to match — social unfurlers need
 absolute URLs, and a stale host means no preview image.
 
 When testing a link in WhatsApp, add `?v=2` (then `?v=3`, …) to bust its

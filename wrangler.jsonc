@@ -5,6 +5,9 @@
   "observability": {
     "enabled": true
   },
+  "routes": [
+    { "pattern": "hanees.site", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./public"
   }
